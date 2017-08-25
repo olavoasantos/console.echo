@@ -17,8 +17,8 @@ __Obs__ All the methods are NOT case sensitive. Feel free to use whatever feels 
 
 ### Writing
 There are two methods to print to the terminal:
-    + `text`: Simply prints to the terminal
-    + `dd`:   Prints to the terminal and exits the process (good for debugging `=)`)
+    * `text`: Simply prints to the terminal
+    * `dd`:   Prints to the terminal and exits the process (good for debugging `=)`)
 
 The strings are formatted by the chained methods before it.
 These methods accept multiple arguments which will be printed joined by a whitespace.
@@ -29,22 +29,22 @@ These methods accept multiple arguments which will be printed joined by a whites
 
 ### Colors
 Choose between 16 colors:
-    + black
-    + red
-    + green
-    + yellow
-    + blue
-    + magenta
-    + cyan
-    + lgrey
-    + grey
-    + lred
-    + lgreen
-    + lyellow
-    + lblue
-    + lmagenta
-    + lcyan
-    + white
+    * black
+    * red
+    * green
+    * yellow
+    * blue
+    * magenta
+    * cyan
+    * lgrey
+    * grey
+    * lred
+    * lgreen
+    * lyellow
+    * lblue
+    * lmagenta
+    * lcyan
+    * white
 
 ### Background
 To change the background color, chain the name of the color with `Bg` at the end before the `text` method:
@@ -63,12 +63,12 @@ To change the background color, chain the color name before the `text` method.:
 ```
 
 ### Text modifiers
-    + bold
-    + dim
-    + underline
-    + blink
-    + inverse
-    + hidden
+    * bold
+    * dim
+    * underline
+    * blink
+    * inverse
+    * hidden
 
 To use text modifiers just chain them on the string before the `text` method:
 ```js
@@ -78,9 +78,9 @@ To use text modifiers just chain them on the string before the `text` method:
 
 ### Helpers
 There are three helpers:
-    + reset: Resets the style to the termal's default.
-    + break: Adds a line break `\n` and jumps to the next line.
-    + tab:   Adds a tab `\t`.
+    * reset: Resets the style to the termal's default.
+    * break: Adds a line break `\n` and jumps to the next line.
+    * tab:   Adds a tab `\t`.
 
 To use them, just chain them along:
 ```js
