@@ -8,7 +8,7 @@ A simple terminal string prettyfier with a readable interface.
 
 ## Usage
 ```js
-    let echo = require("echo.js");
+    let echo = require("console.echo");
 
     echo.blueBg.white.bold.text("Hello world!");
 ```
