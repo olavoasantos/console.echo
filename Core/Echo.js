@@ -84,12 +84,6 @@ class Echo {
         return store;
     }
 
-    dd(...args) {
-        args.unshift(" "); args.push(" ");
-        console.log(...args)
-        process.exit();
-    }
-
     color(name) {
         process.stdout.write(this.code().color[name]);
 
@@ -108,13 +102,79 @@ class Echo {
         return this.proxy();
     }
 
+    dd(...args) {
+        args.unshift(" "); args.push(" ");
+        console.log(...args)
+        process.exit();
+    }
+
     text(...msg) {
-        process.stdout.write(` ${msg.join(" ")} `);
+        process.stdout.write(`${msg.join(" ")}`);
         this.control("reset");
 
         return this.proxy();
     }
 
+    center(msg, size) {
+        size = size || process.stdout.columns;
+        process.stdout.write(str_pad(`  ${msg}  `, size, " "));
+        this.control("reset");
+
+        return this.proxy();
+    }
+
+    right(msg, size) {
+        size = size || process.stdout.columns;
+        process.stdout.write(str_pad_left(`  ${msg}  `, size, " "));
+        this.control("reset");
+
+        return this.proxy();
+    }
+
+    left(msg, size) {
+        size = size || process.stdout.columns;
+        process.stdout.write(str_pad_right(`  ${msg}  `, size, " "));
+        this.control("reset");
+
+        return this.proxy();
+    }
+
+    line(size) {
+        size = size || process.stdout.columns;
+        process.stdout.write(str_pad(``, size, " "));
+        this.control("reset");
+
+        return this.proxy();
+    }
+
+}
+
+function str_pad(str, size, pad) {
+    for(let n = str.length; n < size; n++) {
+        if(n%2 === 0) {
+            str = pad + str;
+        } else {
+            str = str + pad;
+        }
+    }
+
+    return str;
+}
+
+function str_pad_left(str, size, pad) {
+    for(let n = str.length; n < size; n++) {
+        str = pad + str;
+    }
+
+    return str;
+}
+
+function str_pad_right(str, size, pad) {
+    for(let n = str.length; n < size; n++) {
+        str = str + pad;
+    }
+
+    return str;
 }
 
 module.exports = Echo;

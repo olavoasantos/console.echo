@@ -1,6 +1,6 @@
 {
   "name": "console.echo",
-  "version": "0.0.2b",
+  "version": "0.0.3",
   "description": "A simple terminal string prettyfier with a readable interface.",
   "main": "index.js",
   "scripts": {
