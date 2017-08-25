@@ -1,9 +1,9 @@
-# Echo.js
+# Console.Echo
 A simple terminal string prettyfier with a readable interface.
 
 ## Install
 ```
-    npm install echo.js
+    npm install console.echo
 ```
 
 ## Usage
@@ -95,7 +95,7 @@ There are three helpers:
 To use them, just chain them along:
 ```js
     echo.text("Line break after the text").break;
-    
+
     echo.redBg.tab.text("Tab brefore text (with red background)")
 ```
 
