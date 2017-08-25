@@ -17,7 +17,6 @@ __Obs__ All the methods are NOT case sensitive. Feel free to use whatever feels 
 
 ### Writing
 There are two methods to print to the terminal:
-
     + `text`: Simply prints to the terminal
     + `dd`:   Prints to the terminal and exits the process (good for debugging `=)`)
 
